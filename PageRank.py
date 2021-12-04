@@ -17,7 +17,7 @@ for i in range(len(link)):
 totallink = np.sum(original_transition,axis=0)
 for i in range(len(link)):
     if(totallink[i] == 0):
-        totallink = 1
+        totallink[i] = 1
 original_transition = original_transition / totallink
 
 print("Original transition matrix", original_transition)
